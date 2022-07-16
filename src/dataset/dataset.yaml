@@ -1,0 +1,9 @@
+#train and val data
+train: /Users/krzysztofragan/Desktop/vscode/Face Mask Detection/src/dataset/images/train
+val: /Users/krzysztofragan/Desktop/vscode/Face Mask Detection/src/dataset/images/val
+
+#number of classes
+nc: 3
+
+#class names:
+names: ['Without mask','Mask worn incorrectly','With mask']
