@@ -68,6 +68,7 @@ def run(
         update=False,  # update all models
         project=ROOT / 'runs/detect',  # save results to project/name
         name='exp',  # save results to project/name
+        nomask = 'Without Mask', #save results to folder Without Masks
         exist_ok=False,  # existing project/name ok, do not increment
         line_thickness=3,  # bounding box thickness (pixels)
         hide_labels=False,  # hide labels
@@ -86,6 +87,9 @@ def run(
     # Directories
     save_dir = increment_path(Path(project) / name, exist_ok=exist_ok)  # increment run
     (save_dir / 'labels' if save_txt else save_dir).mkdir(parents=True, exist_ok=True)  # make dir
+
+    nomask_dir = increment_path(Path(save_dir) / nomask, exist_ok=exist_ok)
+    (save_dir / 'labels' if save_txt else nomask_dir).mkdir(parents=True, exist_ok=True)  # make dir
 
     # Load model
     device = select_device(device)
@@ -141,6 +145,7 @@ def run(
 
             p = Path(p)  # to Path
             save_path = str(save_dir / p.name)  # im.jpg
+            nomask_path = str(nomask_dir / p.name)
             txt_path = str(save_dir / 'labels' / p.stem) + ('' if dataset.mode == 'image' else f'_{frame}')  # im.txt
             s += '%gx%g ' % im.shape[2:]  # print string
             gn = torch.tensor(im0.shape)[[1, 0, 1, 0]]  # normalization gain whwh
@@ -183,6 +188,8 @@ def run(
             # Save results (image with detections)
             if save_img:
                 if dataset.mode == 'image':
+                    if names[c] == 'Without mask':
+                        cv2.imwrite(nomask_path, im0)
                     cv2.imwrite(save_path, im0)
                 else:  # 'video' or 'stream'
                     if vid_path[i] != save_path:  # new video
