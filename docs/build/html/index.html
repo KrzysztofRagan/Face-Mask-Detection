@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to Face Detection Mask’s documentation! &mdash; Face Mask Detection  documentation</title>
+  <title>WELCOME TO FACE DETECTION MASK’S DOCUMENTATION! &mdash; Face Mask Detection  documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -56,7 +56,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="#" class="icon icon-home"></a> &raquo;</li>
-      <li>Welcome to Face Detection Mask’s documentation!</li>
+      <li>WELCOME TO FACE DETECTION MASK’S DOCUMENTATION!</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -67,24 +67,63 @@
            <div itemprop="articleBody">
              
   <section id="welcome-to-face-detection-mask-s-documentation">
-<h1>Welcome to Face Detection Mask’s documentation!<a class="headerlink" href="#welcome-to-face-detection-mask-s-documentation" title="Permalink to this heading"></a></h1>
+<h1>WELCOME TO FACE DETECTION MASK’S DOCUMENTATION!<a class="headerlink" href="#welcome-to-face-detection-mask-s-documentation" title="Permalink to this heading"></a></h1>
+<p>This is Face Mask Detection program, that uses yolov5 neural network to detect if people on the photos are using face masks, are using them wrong, or don’t have them!</p>
+<p>link to yolov5: <a class="reference external" href="https://github.com/ultralytics/yolov5">https://github.com/ultralytics/yolov5</a></p>
+<section id="instalation">
+<h2>INSTALATION<a class="headerlink" href="#instalation" title="Permalink to this heading"></a></h2>
+<p><strong>Instruction for MacOS Users</strong></p>
+<p>Make folder, where you would like to have whole program. Then User has to initialize <a class="reference external" href="https://github.com">github</a>.</p>
+<p>It is done by typing in terminal in specific directory <em>git init</em>.</p>
+<img alt="_images/git_init.png" src="_images/git_init.png" />
+<p>Next step is clone repository from github.</p>
+<p>command: <em>git clone https://github.com/KrzysztofRagan/Face-Mask-Detection/tree/main</em></p>
+<p>When all files of program will be in proper directory, User has to install python environment and packages that are used to run the program. Program can be opened by python3.</p>
+<p><strong>Instalation of python</strong></p>
+<p>Just go on original <a class="reference external" href="https://www.python.org">python website</a> and download python.</p>
+<p><strong>Instalation of packages</strong></p>
+<p>By using pip, User can download all packages, that are necessary to run a program.</p>
+<p><a class="reference external" href="https://www.geeksforgeeks.org/how-to-install-pip-in-macos/">pip installation</a></p>
+<p>To download packages User has to type in terminal <em>pip install package_name</em></p>
+<p><strong>Packages used in program:</strong></p>
+<ul class="simple">
+<li><p>customtkinter</p></li>
+<li><p>tkinter</p></li>
+</ul>
+</section>
+<section id="program-running">
+<h2>PROGRAM RUNNING<a class="headerlink" href="#program-running" title="Permalink to this heading"></a></h2>
+<p>To run the program User has to be in <em>src</em> directory  in terminal (where are located python programs such as GUI.py and functionality.py).</p>
+<img alt="_images/src.png" src="_images/src.png" />
+<p>To RUN the program type in terminal <em>downloaded version of python GUI.py</em> (for example <em>python3.10 GUI.py</em>).</p>
+<img alt="_images/GUI.png" src="_images/GUI.png" />
+<p>If User wants to choose photos, that are going to be detected the button “WHAT DETECT?” shoul be pressed and picked up folder, where User stores photos.</p>
+<p>After pickig up the folder button “DETECT” should be pressed. It will run the process of detection.</p>
+<img alt="_images/detection_finished.png" src="_images/detection_finished.png" />
+<p>After information about finished detection photos are possible to see under button “SHOW RESULTS”</p>
+<img alt="_images/results.png" src="_images/results.png" />
+<p>There is created folder named <em>exp_latest_number</em>, where User has possibility to see retults of detection on photo. In this folder is created also folder named <em>Without Mask</em>, where are put photos, on which person / people do not wear masks.</p>
+<p><strong>RESULTS</strong></p>
+<p>Program creates frame on face on each person. After it decides in which state is person:</p>
+<ul class="simple">
+<li><p>With Mask</p></li>
+<li><p>Without Mask</p></li>
+<li><p>Mask worn incorrectly</p></li>
+</ul>
+<p>Example of detection, where person has mask worn correctly:</p>
+<img alt="_images/correct.png" src="_images/correct.png" />
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">src</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Face_Mask_Detection.html">Face_Mask_Detection module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Dataset_prep.html">Dataset_prep module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="GUI.html">GUI module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="functionality.html">functionality module</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </section>
-<section id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading"></a></h1>
-<ul class="simple">
-<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
-<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
-<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
-</ul>
 </section>
 
 
