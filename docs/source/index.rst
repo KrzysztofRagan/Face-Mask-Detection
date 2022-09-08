@@ -17,7 +17,7 @@ Make folder, where you would like to have whole program. Then User has to initia
 
 It is done by typing in terminal in specific directory *git init*. 
 
-.. image:: ../images/git_init.png
+.. image:: images/git_init.png
 
 Next step is clone repository from github. 
 
@@ -46,21 +46,21 @@ PROGRAM RUNNING
 ---------------
 To run the program User has to be in *src* directory  in terminal (where are located python programs such as GUI.py and functionality.py).
 
-.. image:: ../images/src.png
+.. image:: images/src.png
 
 To RUN the program type in terminal *downloaded version of python GUI.py* (for example *python3.10 GUI.py*). 
 
-.. image:: ../images/GUI.png
+.. image:: images/GUI.png
 
 If User wants to choose photos, that are going to be detected the button "WHAT DETECT?" shoul be pressed and picked up folder, where User stores photos. 
 
 After pickig up the folder button "DETECT" should be pressed. It will run the process of detection. 
 
-.. image:: ../images/detection_finished.png
+.. image:: images/detection_finished.png
 
 After information about finished detection photos are possible to see under button "SHOW RESULTS"
 
-.. image:: ../images/results.png
+.. image:: images/results.png
 
 There is created folder named *exp_latest_number*, where User has possibility to see retults of detection on photo. In this folder is created also folder named *Without Mask*, where are put photos, on which person / people do not wear masks.  
 
@@ -74,7 +74,7 @@ Program creates frame on face on each person. After it decides in which state is
 
 Example of detection, where person has mask worn correctly:
 
-.. image:: ../images/correct.png
+.. image:: images/correct.png
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
