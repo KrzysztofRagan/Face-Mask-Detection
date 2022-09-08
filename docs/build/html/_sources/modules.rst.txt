@@ -4,4 +4,6 @@ src
 .. toctree::
    :maxdepth: 4
 
-   Face_Mask_Detection
+   Dataset_prep
+   GUI
+   functionality

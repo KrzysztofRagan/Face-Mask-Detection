@@ -4,6 +4,13 @@ from tkinter import *
 from tkinter import filedialog
 from tkinter import messagebox as mbox
 
+"""
+Functionality contains:
+- choosing folder - in which photos will be detected
+- detection - process of detection of chosen folder
+- results - the folder will be opened with results
+"""
+
 detect_path = ('../ext/yolov5/runs/train/exp/control')
 
 
@@ -27,7 +34,6 @@ def detect_function():
     print(f'Detection problem {ex}')
 
 def show_results():
-    folder_list = os.listdir('../ext/yolov5/runs/detect')
     list_of_folders = glob.glob('../ext/yolov5/runs/detect/*')
     show_results.latest_folder = max(list_of_folders, key=os.path.getctime)
 
