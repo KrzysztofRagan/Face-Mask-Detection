@@ -11,25 +11,20 @@ Functionality contains:
 - results - the folder will be opened with results
 """
 
-detect_path = ('../ext/yolov5/runs/train/exp/control')
-
-
-
-
-def choose_folder():
-    global detect_path
-    folder_path = StringVar()
+def set_folder(try_path):
     try:
-      detect_path = filedialog.askdirectory(initialdir=detect_path)
-    except Exception as ex:
-      print(f'Choosing directory problem: {ex}')
-    folder_path.set(detect_path)
-    print(detect_path)
+      detect_path = try_path
+    except:
+      detect_path = ('../ext/yolov5/runs/train/exp/control')
+      print('Default path. No chosen path.')
+    if detect_path == "":
+      detect_path = ('../ext/yolov5/runs/train/exp/control')
 
-def detect_function():
+    return detect_path
+
+def detect_function(detect_path):
   try:
     subprocess.call(['python3.10', '../ext/yolov5/detect.py', '--source', detect_path, '--weights', '../ext/yolov5/runs/train/exp/weights/best.pt'])
-    mbox.showinfo("Information", "Detection finished")
   except Exception as ex:
     print(f'Detection problem {ex}')
 
