@@ -1,2 +1,2 @@
 DOCUMENTATION:
-https://face-mask-detection.readthedocs.io/en/latest/?
+https://face-mask-detection.readthedocs.io/en/latest
