@@ -32,9 +32,4 @@ def results():
     list_of_folders = glob.glob('../ext/yolov5/runs/detect/*')
     results.latest_folder = max(list_of_folders, key=os.path.getctime)
     return results.latest_folder
-    # if sys.platform == "win32":
-    #     os.startfile(show_results.latest_folder)
-    # else:
-    #     opener ="open" if sys.platform == "darwin" else "xdg-open"
-    #     subprocess.call([opener, show_results.latest_folder])
 
