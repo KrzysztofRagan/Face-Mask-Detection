@@ -28,13 +28,13 @@ def detect_function(detect_path):
   except Exception as ex:
     print(f'Detection problem {ex}')
 
-def show_results():
+def results():
     list_of_folders = glob.glob('../ext/yolov5/runs/detect/*')
-    show_results.latest_folder = max(list_of_folders, key=os.path.getctime)
-
-    if sys.platform == "win32":
-        os.startfile(show_results.latest_folder)
-    else:
-        opener ="open" if sys.platform == "darwin" else "xdg-open"
-        subprocess.call([opener, show_results.latest_folder])
+    results.latest_folder = max(list_of_folders, key=os.path.getctime)
+    return results.latest_folder
+    # if sys.platform == "win32":
+    #     os.startfile(show_results.latest_folder)
+    # else:
+    #     opener ="open" if sys.platform == "darwin" else "xdg-open"
+    #     subprocess.call([opener, show_results.latest_folder])
 

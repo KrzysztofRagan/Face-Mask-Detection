@@ -21,7 +21,7 @@ class GUI(tkinter.Tk):
         detect_button.place(relx=0.5, rely=0.4, anchor=tkinter.CENTER)
 
 
-        show_results_button = customtkinter.CTkButton(master=self, text="SHOW RESULTS", command=show_results)
+        show_results_button = customtkinter.CTkButton(master=self, text="SHOW RESULTS", command=self.show_results)
         show_results_button.place(relx=0.5, rely=0.6, anchor=tkinter.CENTER)
 
 
@@ -42,6 +42,12 @@ class GUI(tkinter.Tk):
         mbox.showinfo("Information", "Detection finished")
 
 
+    def show_results(self):
+        if sys.platform == "win32":
+            os.startfile(results())
+        else:
+            opener ="open" if sys.platform == "darwin" else "xdg-open"
+            subprocess.call([opener, results()])
 
 app = GUI()
 
