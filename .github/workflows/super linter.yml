@@ -5,11 +5,8 @@ on: push
 
 jobs:
   super-lint:
-      - name: macOS
-        matrix: macos
-        runs-on:
-          arm: [m1]
-          intel: [macos-latest]
+    name: Lint code base
+    runs-on: macos-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
